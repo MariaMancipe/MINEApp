@@ -1,0 +1,45 @@
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="panel-title">Lista de Estudiantes</h3>
+    </div>
+    <div class="panel-body">
+        <div class="table-responsive">
+            <table class="table table-responsive table-hover table-bordered table-condensed">
+                <thead>
+                    <tr>
+                        <th>Nombres y Apellidos</th>
+                        <th>Correo</th>
+                        <th>Maestria</th>
+                        <th>Estado</th>
+                        <th>Semestre</th>
+                        <th>C&oacute;digo</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="e in filteredResults  | startFrom:currentPage*pageSize | limitTo:pageSize">
+                        <td>{{e.nombresApellidos}}</td>
+                        <td>{{e.correoUniandes}}</td>
+                        <td>{{e.maestria}}</td>
+                        <td>{{e.estado}}</td>
+                        <td>{{e.semestre}}</td>
+                        <td>{{e.codigo}}</td>
+                        <td>
+                            <a class="btn btn-sm btn-primary" ><span class="glyphicon glyphicon-pencil"></span></a>
+                            <a class="btn btn-sm btn-info" ><span class="glyphicon glyphicon-user"></span></a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <ul class="pagination pagination-centered">
+            <li ng-class="{disabled:currentPage == 0}"><a id="first" href ng-click="first()"> &#8920;</a></li>
+            <li ng-class="{disabled:currentPage == 0}"><a id="prev" href ng-click="previous()"> &#8810;</a></li>
+            <li ng-repeat="n in pageRange | startFrom:currentPage-(currentPage%10) | limitTo:pageSize"
+                ng-class="{active:currentPage == n}" ng-click="setPage(n)"><a href ng-bind="n + 1">1</a></li>
+            <li ng-class="{disabled: currentPage == (numberOfPages() - 1)}"> <a id="next" href ng-click="next()">&#8811;</a></li>
+            <li ng-class="{disabled: currentPage == (numberOfPages() - 1)}"><a id="last" href ng-click="last()">&#8921;</a></li>
+        </ul>
+    </div>
+
+</div>

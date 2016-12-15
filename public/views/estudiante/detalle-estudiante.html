@@ -1,0 +1,108 @@
+<div class="panel panel-primary">
+    <div class="panel-heading"><h3 class="panel-title">Datos Personales</h3></div>
+    <div class="panel-body">
+        <form>
+            <div class="row">
+                <div class="col-sm-4">
+                    <div class="row">
+                        <div class="col-sm-10">
+                            <label>Nombres</label><input type="text" class="form-control" ng-model="nombres" ng-required="true">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-10">
+                            <label>Apellidos</label><input type="text" class="form-control" ng-model="apellidos" ng-required="true">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-10">
+                            <label>Correo Uniandes</label><input type="email" class="form-control" ng-model="estudiante.correoUniandes" ng-required="true">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-10">
+                            <label>Correo Alterno</label><input type="email" class="form-control" ng-model="estudiante.correoAlterno" ng-required="true">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="row">
+                        <div class="col-sm-10">
+                            <label>Codigo</label><input type="number" class="form-control" ng-model="estudiante.codigo">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-10">
+                            <label>Semestre</label><input type="number" class="form-control" ng-model="estudiante.semestre">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-10">
+                            <label>Telefono</label><input type="tel" class="form-control" ng-model="estudiante.telefono">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-10">
+                            <label>Direccion</label><input type="text" class="form-control" ng-model="estudiante.direccion">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="row">
+                        <div class="col-sm-10">
+                            <label>Empresa</label><input type="text" class="form-control" ng-model="estudiante.empresa">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-10">
+                            <label>Fecha de Nacimiento</label><input type="date" class="form-control" ng-model="estudiante.fechaNacimiento">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-10">
+                            <label>Estado</label>
+                            <select ng-model="estudiante.estado" class="form-control" ng-options="e.text for e in estados" ng-required="true">
+                                <option value="">Selecctionar estado</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-10">
+                            <label>Maestria</label>
+                            <select ng-model="estudiante.maestria" class="form-control" ng-options="m.text for m in maestrias" ng-required="true">
+                                <option value="">Selecctionar maestria</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <br>
+            <div class="row">
+                <div class="col-sm-8"></div>
+                <div class="col-sm-4">
+                    <a type="button" class="btn btn-success" ng-click="save()"><span class="glyphicon glyphicon-save"></span>  Guardar</a>
+                    <a type="button" class="btn btn-danger"><span class="glyphicon glyphicon-remove"></span>  Cancelar</a>
+                </div>
+            </div>
+        </form>
+
+    </div>
+</div>
+<div class="panel panel-info">
+    <div class="panel-heading"><h3 class="panel-title">Cursos</h3></div>
+    <div class="panel-body">
+        <form>
+            <br>
+            <br>
+            <div class="row">
+                <div class="col-sm-10"></div>
+                <div class="col-sm-2">
+                    <a type="button" class="btn btn-success"><span class="glyphicon glyphicon-save"></span>  Guardar</a>
+                    <a type="button" class="btn btn-danger"><span class="glyphicon glyphicon-remove"></span>  Cancelar</a>
+                </div>
+            </div>
+        </form>
+
+    </div>
+</div>

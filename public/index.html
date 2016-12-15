@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="mineApp">
+<head>
+    <meta charset="UTF-8">
+    <!-- DEPENDENCIES -->
+    <script src="./dependencies/jquery-3.1.1.js"></script>
+    <script src="./dependencies/angular.js"></script>
+    <script src="./dependencies/angular-ui-router.js"></script>
+    <script src="./dependencies/bootstrap.js"></script>
+    <script src="./dependencies/ui-bootstrap-tpls-2.0.0.js"></script>
+
+    <!-- STYLESHEETS -->
+    <link type="text/css" rel="stylesheet" href="./stylesheets/style.css">
+    <link type="text/css" rel="stylesheet" href="./stylesheets/bootstrap.css">
+    <link type="text/css" rel="stylesheet" href="./stylesheets/bootstrap-theme.css">
+    <!-- CONTROLLERS -->
+    <script src="./javascripts/app.js"></script>
+    <script src="./javascripts/controllers/estudiante/listaEstudiantesCtrl.js"></script>
+    <script src="./javascripts/controllers/estudiante/cargarEstudiantesCtrl.js"></script>
+    <script src="./javascripts/controllers/estudiante/editarEstudianteCtrl.js"></script>
+    <script src="./javascripts/controllers/estudiante/nuevoEstudianteCtrl.js"></script>
+    <script src="./javascripts/controllers/estudiante/resumenEstudiantesCtrl.js"></script>
+
+    <!-- DIRECTIVES -->
+    <script src="./javascripts/directives/fileModel.js"></script>
+
+    <!-- FILTERS -->
+    <script src="./javascripts/filters/startFromFilter.js"></script>
+
+    <title>MINE</title>
+</head>
+<body>
+    <div id="wrapper">
+        <div ui-view="menu"></div>
+        <div ui-view="content"></div>
+        <div ui-view="footer"></div>
+    </div>
+
+
+</body>
+</html>
